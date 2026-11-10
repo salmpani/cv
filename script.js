@@ -3,19 +3,30 @@
   'use strict';
 
   const greek = {
-    navAbout: 'Σχετικά', navResearch: 'Έρευνα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
+    navAbout: 'Σχετικά', navHighlights: 'Νέα', navResearch: 'Έρευνα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
     navTeaching: 'Διδασκαλία', navService: 'Ακαδημαϊκή προσφορά', navContact: 'Επικοινωνία',
     heroEyebrow: 'ΕΡΕΥΝΗΤΡΙΑ · ΔΙΔΑΣΚΟΥΣΑ · ΣΥΝΕΡΓΑΤΙΔΑ',
     heroTitle: 'Αξιόπιστη ΤΝ με θεμέλιο τη <em>συλλογιστική.</em>',
     heroDescription: 'Ερευνώ πώς η υπολογιστική επιχειρηματολογία και η τυπική συλλογιστική μπορούν να καταστήσουν τα ευφυή συστήματα πιο διαφανή, υπεύθυνα και προσανατολισμένα στις ανθρώπινες ανάγκες.',
     heroAffiliation: 'Μεταδιδακτορική ερευνήτρια · Εθνικό Μετσόβιο Πολυτεχνείο',
-    exploreResearch: 'Εξερεύνησε την έρευνά μου', downloadCv: 'Λήψη CV',
+    exploreResearch: 'Εξερεύνησε την έρευνά μου', downloadCv: 'Λήψη βιογραφικού (Ελληνικά PDF)',
     visualLabel: 'ΕΡΕΥΝΗΤΙΚΕΣ ΣΥΝΔΕΣΕΙΣ', visualFoot: 'ΑΠΟ ΤΗ ΛΟΓΙΚΗ ΣΤΙΣ ΕΦΑΡΜΟΓΕΣ',
     orbitFormal: 'ΤΥΠΙΚΗ<br>ΣΥΛΛΟΓΙΣΤΙΚΗ', orbitExplain: 'ΕΞΗΓΗΣΙΜΗ<br>ΤΝ',
     orbitSystems: 'ΕΥΦΥΗ<br>ΣΥΣΤΗΜΑΤΑ', orbitCore: 'ΑΝΘΡΩΠΟ-<br>ΚΕΝΤΡΙΚΗ<br>ΤΝ',
     factOneLabel: 'ΕΡΕΥΝΗΤΙΚΟ ΠΕΔΙΟ', factOne: 'Αξιόπιστη ΤΝ',
     factTwoLabel: 'ΑΚΑΔΗΜΑΪΚΗ ΘΕΣΗ', factTwo: 'Μεταδιδακτορική ερευνήτρια',
-    factThreeLabel: 'ΕΜΠΕΙΡΙΑ ΠΡΟΤΑΣΕΩΝ', factThree: '20+ υποβολές',
+    factThreeLabel: 'ΕΠΙΣΤΗΜΟΝΙΚΟ ΕΡΓΟ', factThree: '40+ επιστημονικές εργασίες',
+    highlightsTitle: 'Πρόσφατα νέα και διακρίσεις',
+    highlightsIntro: 'Επιλεγμένες δημοσιεύσεις, διακρίσεις και δράσεις καθοδήγησης από την πρόσφατη ακαδημαϊκή μου δραστηριότητα.',
+    highlightOneType: 'ΕΡΕΥΝΑ', highlightOneTitle: 'Νέες εργασίες στην αξιόπιστη ΤΝ και την επιχειρηματολογία',
+    highlightOneBody: 'Τρεις δημοσιεύσεις σε επιστημονικά περιοδικά το 2026 για την ανθρωποκεντρική ΤΝ, τη συνεργατική επιχειρηματολογία και τις απαιτήσεις συστημάτων για την αντιμετώπιση εχθρικών αφηγημάτων.',
+    highlightRead: 'Δείτε τις δημοσιεύσεις',
+    highlightTwoType: 'ΚΑΘΟΔΗΓΗΣΗ', highlightTwoTitle: 'Διάκριση της φοιτητικής ομάδας Perseus',
+    highlightTwoBody: 'Καθοδήγηση της ομάδας Perseus στους τομείς της κυβερνοασφάλειας και των μη επανδρωμένων εναέριων συστημάτων, με διάκριση Youth Entrepreneurship Award.',
+    highlightMentoring: 'Περισσότερα για την καθοδήγηση',
+    highlightThreeType: 'ΒΡΑΒΕΙΟ', highlightThreeTitle: 'Βραβείο Καλύτερης Εργασίας',
+    highlightThreeBody: 'Διάκριση για την ανάπτυξη συστήματος λογικής συλλογιστικής που υποστηρίζει τη συμμόρφωση με τη νομοθεσία προστασίας δεδομένων.',
+    highlightDetails: 'Λεπτομέρειες στο βιογραφικό',
     researchTitle: 'Ερευνητικά ενδιαφέροντα & κατευθύνσεις',
     researchIntro: 'Τρεις αλληλοσυνδεόμενες κατευθύνσεις καθορίζουν την έρευνά μου: αυστηρές μέθοδοι, υπεύθυνος σχεδιασμός και εφαρμογές με ουσιαστικό αντίκτυπο.',
     researchOneTitle: 'Υπολογιστική επιχειρηματολογία & τυπική συλλογιστική',
@@ -49,24 +60,45 @@
     legicrowdSub: 'Κατανοητοί ψηφιακοί όροι χρήσης',
     legicrowdBody: 'Οντολογικές επισημειώσεις ηλεκτρονικών όρων χρήσης για μεγαλύτερη διαφάνεια, ιδιωτικότητα και τεκμηριωμένες αποφάσεις.',
     legicrowdRole: 'Ερευνήτρια · ΕΜΠ',
-    roleLabel: 'Ρόλος', fundingLabel: 'Προϋπολογισμός έργου', programLabel: 'Πρόγραμμα',
-    projectsFootnote: 'Τα ποσά αφορούν προϋπολογισμούς των έργων και όχι προσωπικές χρηματοδοτήσεις. Η ατομική συμβολή περιγράφεται αναλυτικά στο CV.',
+    roleLabel: 'Ρόλος', programLabel: 'Πρόγραμμα', projectLink: 'Πληροφορίες έργου',
+    projectsFootnote: 'Στο βιογραφικό παρουσιάζονται περισσότερες πληροφορίες για τον ρόλο και την ερευνητική μου συμβολή σε κάθε έργο.',
     publicationsTitle: 'Επιλεγμένες δημοσιεύσεις',
     publicationsIntro: 'Επιλογή εργασιών με κρίση. Ο πλήρης κατάλογος βρίσκεται στο ακαδημαϊκό CV και στο προφίλ Google Scholar.',
     viewScholar: 'Προβολή στο Google Scholar', filterAll: 'Όλες οι επιλεγμένες',
     filterReasoning: 'ΤΝ & συλλογιστική', filterSystems: 'Συστήματα & ασφάλεια',
-    filterEducation: 'Εκπαίδευση & ρομποτική', completeList: 'Πλήρης κατάλογος στο CV',
+    filterEducation: 'Εκπαίδευση & ρομποτική', completeList: 'Πλήρης κατάλογος στο βιογραφικό (Ελληνικά PDF)',
     teachingTitle: 'Διδασκαλία σε διαφορετικά πεδία',
     teachingIntro: 'Συνδυάζω τις σαφείς θεωρητικές βάσεις με την εργαστηριακή εξάσκηση, τα παραδείγματα, την εποικοδομητική ανατροφοδότηση και την αυτόνομη επίλυση προβλημάτων.',
     teachingPhilosophy: 'Στόχος μου είναι οι φοιτητές να αναπτύσσουν τόσο τεχνικές δεξιότητες όσο και κριτική, υπεύθυνη στάση απέναντι στην ΤΝ και τις ψηφιακές τεχνολογίες.',
-    teachingEthos: 'ΔΙΔΑΚΤΙΚΗ ΦΙΛΟΣΟΦΙΑ', present: 'σήμερα',
+    teachingEthos: 'ΔΙΔΑΚΤΙΚΗ ΦΙΛΟΣΟΦΙΑ',
     teachingUoa: 'Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών',
-    teachingUoaBody: 'Βάσεις Δεδομένων, Αλγόριθμοι και Δομές Δεδομένων, Εξόρυξη Δεδομένων και Μηχανική Μάθηση, Διάστημα και Κυβερνοασφάλεια.',
-    teachingAir: 'Σχολή Ικάρων', teachingAirBody: 'Μεγάλα Δεδομένα και Υπολογιστικό Νέφος.',
-    teachingThessaly: 'Πανεπιστήμιο Θεσσαλίας', teachingThessalyBody: 'Θέματα Υπολογιστικών και Εφαρμοσμένων Μαθηματικών.',
-    teachingUoaTwo: 'Πανεπιστήμιο Αθηνών', teachingUoaTwoBody: 'Εισαγωγή στον Προγραμματισμό, Αντικειμενοστραφής Προγραμματισμός, Python και Μηχανική Μάθηση.',
-    teachingNtua: 'Εθνικό Μετσόβιο Πολυτεχνείο', teachingNtuaBody: 'Επικουρικό διδακτικό έργο στον Αντικειμενοστραφή Προγραμματισμό (Java).',
-    teachingPostgrad: 'Μεταπτυχιακά προγράμματα', teachingPostgradBody: 'Θέματα Λογικής ΙΙ (διαπανεπιστημιακό ΠΜΣ)· Ανατρεπτικές Τεχνολογίες και Ψηφιακός Μετασχηματισμός (Πανεπιστήμιο Νεάπολις Πάφου).',
+    teachingUoaDate: 'Διδάσκουσα · Σεπ. 2025–σήμερα',
+    courseUoaOne: 'Βάσεις Δεδομένων (SQL)',
+    courseUoaTwo: 'Αλγόριθμοι, Προγραμματισμός και Δομές Δεδομένων (C)',
+    courseUoaThree: 'Εξόρυξη Δεδομένων και Μηχανική Μάθηση',
+    courseUoaFour: 'Διάστημα και Κυβερνοασφάλεια',
+    teachingAir: 'Σχολή Ικάρων', teachingAirDate: 'Συμβασιούχο Διδακτικό Προσωπικό · Μάρ. 2026–σήμερα',
+    courseAirOne: 'Μεγάλα Δεδομένα (Spark, Hadoop, MapReduce, Kafka, MongoDB)',
+    courseAirTwo: 'Νεφοϋπολογιστική',
+    teachingThessaly: 'Πανεπιστήμιο Θεσσαλίας', teachingThessalyDate: 'Διδάσκουσα · Σεπ. 2025–Φεβ. 2026',
+    courseThessalyOne: 'Θέματα Υπολογιστικών και Εφαρμοσμένων Μαθηματικών Ι',
+    teachingUoaTwo: 'Πανεπιστήμιο Αθηνών · Τμήμα Τεχνολογιών Ψηφιακής Βιομηχανίας',
+    teachingUoaTwoDate: 'Αποσπασμένη εκπαιδευτικός · Σεπ. 2023–Σεπ. 2024',
+    courseUoaTwoOne: 'Εισαγωγή στον Προγραμματισμό (C)',
+    courseUoaTwoTwo: 'Αντικειμενοστραφής Προγραμματισμός (C++)',
+    courseUoaTwoThree: 'Μηχανική Μάθηση', courseUoaTwoFour: 'Python',
+    teachingNtua: 'Εθνικό Μετσόβιο Πολυτεχνείο', teachingNtuaDate: 'Επικουρικό διδακτικό έργο · Σεπ. 2018–Φεβ. 2021',
+    courseNtuaOne: 'Εισαγωγή στον Αντικειμενοστραφή Προγραμματισμό (Java)',
+    teachingMsc: 'Διαπανεπιστημιακό ΠΜΣ στη Λογική',
+    teachingMscDate: 'ΕΜΠ · ΕΚΠΑ · Ακαδημία Αθηνών · Φεβ. 2026–σήμερα',
+    courseMscOne: 'Θέματα Λογικής ΙΙ',
+    teachingNeapolis: 'Πανεπιστήμιο Νεάπολις Πάφου',
+    teachingNeapolisDate: 'Επισκέπτρια διδάσκουσα · 2026–σήμερα',
+    courseNeapolisOne: 'Ανατρεπτικές Τεχνολογίες (ΠΜΣ Αναλυτική Δεδομένων και Χρηματοοικονομική Τεχνολογία)',
+    courseNeapolisTwo: 'Ανατρεπτικές Τεχνολογίες και Ψηφιακός Μετασχηματισμός (ΠΜΣ Πληροφοριακά Συστήματα και Ψηφιακή Καινοτομία)',
+    teachingMedical: 'Ιατρική Σχολή ΕΚΠΑ · ΠΜΣ Εφαρμοσμένη Εμβιομηχανική',
+    teachingMedicalDate: 'Προσκεκλημένες διαλέξεις · Μάρ. 2020 και Μάρ. 2026',
+    courseMedicalOne: 'Φορετή Ρομποτική και Εξωσκελετοί στην Υγεία',
     serviceTitle: 'Ακαδημαϊκή προσφορά & διεθνής δραστηριότητα',
     serviceIntro: 'Η έρευνα εξελίσσεται μέσα από συνεργασίες, καθοδήγηση, κοινά εργαλεία και ενεργή συμμετοχή στην επιστημονική κοινότητα.',
     serviceCategoryOne: 'ΕΠΙΜΕΛΕΙΑ & ΣΥΝΕΔΡΙΑ', serviceOneTitle: 'Υποστήριξη της επιστημονικής ανταλλαγής',
@@ -85,6 +117,8 @@
   const translatable = [...document.querySelectorAll('[data-i18n]')];
   const english = new Map(translatable.map(el => [el, el.innerHTML]));
   const languageButton = document.getElementById('language-toggle');
+  const cvLinks = [...document.querySelectorAll('[data-cv-download]')];
+  const portrait = document.querySelector('.hero-portrait');
 
   function setLanguage(language) {
     const isGreek = language === 'el';
@@ -97,7 +131,15 @@
       else if (isGreek) el.textContent = value;
       else el.innerHTML = value;
     });
+    // Keep the download language aligned with the content language.
+    const cvFilename = isGreek ? 'Sofia_Almpani_Academic_CV_Greek.pdf' : 'Sofia_Almpani_CV.pdf';
+    cvLinks.forEach(link => {
+      link.href = cvFilename;
+      link.setAttribute('download', cvFilename);
+      link.setAttribute('hreflang', isGreek ? 'el' : 'en');
+    });
     languageButton.textContent = isGreek ? 'EN' : 'ΕΛ';
+    if (portrait) portrait.alt = isGreek ? 'Η Δρ Σοφία Αλμπάνη παρουσιάζει σε ακαδημαϊκή εκδήλωση' : 'Dr Sofia Almpani presenting at an academic event';
     languageButton.setAttribute('aria-label', isGreek ? 'Switch to English' : 'Μετάβαση στα Ελληνικά');
     languageButton.title = isGreek ? 'Switch to English' : 'Ελληνικά';
     document.title = isGreek ? 'Δρ Σοφία Αλμπάνη · Ακαδημαϊκή Ιστοσελίδα' : 'Dr Sofia Almpani · Academic Research Portfolio';
@@ -108,6 +150,13 @@
   try { preferred = localStorage.getItem('sofia-portfolio-language') || 'en'; } catch { /* ignore */ }
   setLanguage(preferred === 'el' ? 'el' : 'en');
   languageButton.addEventListener('click', () => setLanguage(document.documentElement.lang === 'en' ? 'el' : 'en'));
+
+  // Remote institutional emblems degrade gracefully to a readable acronym.
+  document.querySelectorAll('.institution-logo img').forEach(img => {
+    const showFallback = () => img.parentElement.classList.add('is-missing');
+    img.addEventListener('error', showFallback);
+    if (img.complete && img.naturalWidth === 0) showFallback();
+  });
 
   const menuToggle = document.getElementById('menu-toggle');
   const navigation = document.getElementById('site-nav');

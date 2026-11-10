@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#173b49" />
+    <meta name="theme-color" content="#14283f" />
     <meta name="description" content="Academic website of Dr Sofia Almpani — research in trustworthy and human-centred AI, computational argumentation, formal reasoning, and intelligent systems." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dr Sofia Almpani | Trustworthy & Human-Centred AI" />
@@ -28,6 +28,7 @@
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#highlights" data-i18n="navHighlights">Highlights</a>
           <a href="#research" data-i18n="navResearch">Research</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#publications" data-i18n="navPublications">Publications</a>
@@ -44,13 +45,16 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">RESEARCHER · EDUCATOR · COLLABORATOR</span></div>
-            <p class="hero-name">Dr Sofia Almpani</p>
+            <div class="hero-persona">
+              <img class="hero-portrait" src="sofia-almpani-photo.jpg" alt="Dr Sofia Almpani presenting at an academic event" width="118" height="118" fetchpriority="high" />
+              <p class="hero-name">Dr Sofia Almpani</p>
+            </div>
             <h1 id="hero-title" data-i18n="heroTitle">Trustworthy AI, grounded in <em>reasoning.</em></h1>
             <p class="hero-description" data-i18n="heroDescription">I explore how computational argumentation and formal reasoning can make intelligent systems more transparent, accountable and responsive to human needs.</p>
             <p class="hero-affiliation"><span class="affiliation-pulse"></span><span data-i18n="heroAffiliation">Postdoctoral Researcher · National Technical University of Athens</span></p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#research"><span data-i18n="exploreResearch">Explore my research</span><span aria-hidden="true">↗</span></a>
-              <a class="btn btn-outline" href="Sofia_Almpani_CV.pdf" download><span data-i18n="downloadCv">Download CV</span><span aria-hidden="true">↓</span></a>
+              <a class="btn btn-outline" href="Sofia_Almpani_CV.pdf" download="Sofia_Almpani_CV.pdf" data-cv-download><span data-i18n="downloadCv">Download CV (English PDF)</span><span aria-hidden="true">↓</span></a>
             </div>
             <div class="hero-social" aria-label="Academic profiles">
               <a href="https://scholar.google.gr/citations?hl=en&amp;user=rC9Hv_AAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
@@ -65,16 +69,16 @@
             <div class="visual-topline"><span data-i18n="visualLabel">RESEARCH CONNECTIONS</span><span>01 / 03</span></div>
             <div class="reasoning-graphic" aria-hidden="true">
               <svg class="network-lines" viewBox="0 0 380 365" preserveAspectRatio="xMidYMid meet">
-                <circle cx="190" cy="184" r="120" fill="none" stroke="#ceded8" stroke-width="1" stroke-dasharray="4 8" />
-                <path d="M190 184 L87 84 M190 184 L296 104 M190 184 L275 281" stroke="#97bcb0" stroke-width="2" fill="none" />
-                <circle cx="190" cy="184" r="67" fill="#173b49" />
-                <circle cx="87" cy="84" r="34" fill="#e8f2ed" stroke="#9dc5b6" />
-                <circle cx="296" cy="104" r="34" fill="#e8f2ed" stroke="#9dc5b6" />
-                <circle cx="275" cy="281" r="34" fill="#e8f2ed" stroke="#9dc5b6" />
-                <circle cx="190" cy="184" r="8" fill="#c4dfcf" />
-                <circle cx="87" cy="84" r="6" fill="#2b766b" />
-                <circle cx="296" cy="104" r="6" fill="#2b766b" />
-                <circle cx="275" cy="281" r="6" fill="#2b766b" />
+                <circle cx="190" cy="184" r="120" fill="none" stroke="#dcc7bb" stroke-width="1" stroke-dasharray="4 8" />
+                <path d="M190 184 L87 84 M190 184 L296 104 M190 184 L275 281" stroke="#c69378" stroke-width="2" fill="none" />
+                <circle cx="190" cy="184" r="67" fill="#183650" />
+                <circle cx="87" cy="84" r="34" fill="#f5e8de" stroke="#d1a38b" />
+                <circle cx="296" cy="104" r="34" fill="#f5e8de" stroke="#d1a38b" />
+                <circle cx="275" cy="281" r="34" fill="#f5e8de" stroke="#d1a38b" />
+                <circle cx="190" cy="184" r="8" fill="#e9b594" />
+                <circle cx="87" cy="84" r="6" fill="#a44931" />
+                <circle cx="296" cy="104" r="6" fill="#a44931" />
+                <circle cx="275" cy="281" r="6" fill="#a44931" />
               </svg>
               <span class="orbit-label label-top-left" data-i18n="orbitFormal">FORMAL<br />REASONING</span>
               <span class="orbit-label label-top-right" data-i18n="orbitExplain">EXPLAINABLE<br />AI</span>
@@ -87,7 +91,36 @@
         <div class="container hero-bottom">
           <div><span class="fact-label" data-i18n="factOneLabel">RESEARCH FOCUS</span><strong data-i18n="factOne">Trustworthy AI</strong></div>
           <div><span class="fact-label" data-i18n="factTwoLabel">ACADEMIC POSITION</span><strong data-i18n="factTwo">Postdoctoral Researcher</strong></div>
-          <div><span class="fact-label" data-i18n="factThreeLabel">PROPOSAL EXPERIENCE</span><strong data-i18n="factThree">20+ submissions</strong></div>
+          <div><span class="fact-label" data-i18n="factThreeLabel">RESEARCH OUTPUTS</span><strong data-i18n="factThree">40+ scholarly works</strong></div>
+        </div>
+      </section>
+
+      <section class="section highlights-section" id="highlights" aria-labelledby="highlights-title">
+        <div class="container">
+          <div class="section-heading-row">
+            <div><p class="section-index">01 / NEWS &amp; HIGHLIGHTS</p><h2 id="highlights-title" data-i18n="highlightsTitle">Recent milestones</h2></div>
+            <p class="section-intro" data-i18n="highlightsIntro">Selected publications, recognition and mentoring highlights from my recent academic work.</p>
+          </div>
+          <div class="highlights-grid">
+            <article class="highlight-card">
+              <div class="highlight-meta"><time datetime="2026">2026</time><span data-i18n="highlightOneType">RESEARCH</span></div>
+              <h3 data-i18n="highlightOneTitle">New work on trustworthy AI and argumentation</h3>
+              <p data-i18n="highlightOneBody">Three journal articles on human-centred AI, collaborative argumentation and requirements for countering hostile narratives.</p>
+              <a href="#publications"><span data-i18n="highlightRead">Explore publications</span><span aria-hidden="true"> ↗</span></a>
+            </article>
+            <article class="highlight-card">
+              <div class="highlight-meta"><time datetime="2026">2026</time><span data-i18n="highlightTwoType">MENTORING</span></div>
+              <h3 data-i18n="highlightTwoTitle">Perseus student team recognised</h3>
+              <p data-i18n="highlightTwoBody">Mentoring the Perseus team in cybersecurity and unmanned aerial systems, recognised with a Youth Entrepreneurship Award.</p>
+              <a href="#service"><span data-i18n="highlightMentoring">More on mentoring</span><span aria-hidden="true"> ↗</span></a>
+            </article>
+            <article class="highlight-card">
+              <div class="highlight-meta"><time datetime="2025">2025</time><span data-i18n="highlightThreeType">AWARD</span></div>
+              <h3 data-i18n="highlightThreeTitle">Best Paper Award</h3>
+              <p data-i18n="highlightThreeBody">Recognition for work on a logical reasoning system supporting compliance with data protection regulations.</p>
+              <a href="Sofia_Almpani_CV.pdf" download="Sofia_Almpani_CV.pdf" data-cv-download><span data-i18n="highlightDetails">Details in academic CV</span><span aria-hidden="true"> ↓</span></a>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -95,7 +128,7 @@
         <div class="container">
           <div class="section-heading-row">
             <div>
-              <p class="section-index">01 / RESEARCH</p>
+              <p class="section-index">02 / RESEARCH</p>
               <h2 id="research-title" data-i18n="researchTitle">Research interests & direction</h2>
             </div>
             <p class="section-intro" data-i18n="researchIntro">Three connected strands shape my research: rigorous methods, responsible design, and applications that make AI useful in practice.</p>
@@ -112,7 +145,7 @@
       <section class="section projects-section" id="projects" aria-labelledby="projects-title">
         <div class="container">
           <div class="section-heading-row">
-            <div><p class="section-index">02 / PROJECTS</p><h2 id="projects-title" data-i18n="projectsTitle">Research in practice</h2></div>
+            <div><p class="section-index">03 / PROJECTS</p><h2 id="projects-title" data-i18n="projectsTitle">Research in practice</h2></div>
             <p class="section-intro" data-i18n="projectsIntro">Selected collaborative projects spanning AI, robotics, cybersecurity, education and digital innovation.</p>
           </div>
           <div class="projects-grid">
@@ -121,46 +154,52 @@
               <h3>AVALANCHE</h3><p class="project-subtitle" data-i18n="avalancheSub">Understanding hostile online narratives</p>
               <p data-i18n="avalancheBody">Research on hostile online narratives, socio-technical requirements and approaches to detecting disinformation, hate speech and deepfakes.</p>
               <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="avalancheRole">Researcher · IDIR</span></span><span><b>GA</b><br />101168393</span></div>
+              <a class="project-link" href="https://avalancheproject.eu/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
             <article class="project-card">
               <div class="project-top"><span class="project-category">ERASMUS+</span><span class="project-period">2020–2023</span></div>
               <h3>STEAM2GO</h3><p class="project-subtitle" data-i18n="steamSub">Mobile makerspaces for schools</p>
               <p data-i18n="steamBody">Development of educational materials and a Moodle-based platform for mobile makerspaces in secondary education.</p>
-              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="steamRole">Researcher · NTUA</span></span><span><b data-i18n="fundingLabel">Project budget</b><br />€229,845</span></div>
+              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="steamRole">Researcher · NTUA</span></span></div>
+              <a class="project-link" href="https://www.isisdavinci.edu.it/pagine/progetto-steam2go" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
             <article class="project-card">
               <div class="project-top"><span class="project-category">CYPRUS RIF</span><span class="project-period">2022–2024</span></div>
               <h3>MakerSpace</h3><p class="project-subtitle" data-i18n="makerspaceSub">Learning through making</p>
               <p data-i18n="makerspaceBody">Educational R&amp;D for maker education, combining STEM learning, CAD, 3D printing and hands-on design.</p>
-              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="makerspaceRole">Researcher · ENGINO</span></span><span><b data-i18n="fundingLabel">Project budget</b><br />€2.112m</span></div>
+              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="makerspaceRole">Researcher · ENGINO</span></span></div>
+              <a class="project-link" href="https://engino.com/en-gb/pages/makerspace-conference" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
             <article class="project-card">
               <div class="project-top"><span class="project-category">HORIZON 2020</span><span class="project-period">2019–2021</span></div>
               <h3>INBOTS</h3><p class="project-subtitle" data-i18n="inbotsSub">Inclusive robotics for society</p>
               <p data-i18n="inbotsBody">Research on educational robotics and the societal uptake of robotics, with contributions to deliverables and workshops.</p>
               <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="inbotsRole">Researcher · EDUMOTIVA</span></span><span><b>GA</b><br />780073</span></div>
+              <a class="project-link" href="https://cordis.europa.eu/project/id/780073" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
             <article class="project-card">
               <div class="project-top"><span class="project-category">CYPRUS RIF</span><span class="project-period">2021–2022</span></div>
               <h3>GinoBot</h3><p class="project-subtitle" data-i18n="ginobotSub">A robotics ecosystem for STEM</p>
               <p data-i18n="ginobotBody">Curriculum and educational material development supporting an expandable educational robot and its learning ecosystem.</p>
-              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="ginobotRole">Researcher · ENGINO</span></span><span><b data-i18n="fundingLabel">Project budget</b><br />€1.604m</span></div>
+              <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="ginobotRole">Researcher · ENGINO</span></span></div>
+              <a class="project-link" href="https://engino.com/pages/innovations-in-stem-and-robotics-teaching" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
             <article class="project-card">
               <div class="project-top"><span class="project-category">NGI TRUST</span><span class="project-period">2020–2021</span></div>
               <h3>LegiCrowd</h3><p class="project-subtitle" data-i18n="legicrowdSub">Making digital terms understandable</p>
               <p data-i18n="legicrowdBody">Ontology-based annotations of online terms of service to support transparency, privacy and informed decisions.</p>
               <div class="project-facts"><span><b data-i18n="roleLabel">Role</b><br /><span data-i18n="legicrowdRole">Researcher · NTUA</span></span><span><b data-i18n="programLabel">Programme</b><br />H2020 / NGI TRUST</span></div>
+              <a class="project-link" href="https://ngi.eu/ngi-projects/ngi-trust/" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Project details</span><span aria-hidden="true">↗</span></a>
             </article>
           </div>
-          <p class="projects-note" data-i18n="projectsFootnote">Funding figures refer to project budgets, not personal grants. My contribution to each project is described in the downloadable CV.</p>
+          <p class="projects-note" data-i18n="projectsFootnote">The CV provides further details on my role and research contributions to each project.</p>
         </div>
       </section>
 
       <section class="section publications-section" id="publications" aria-labelledby="publications-title">
         <div class="container">
           <div class="section-heading-row">
-            <div><p class="section-index">03 / PUBLICATIONS</p><h2 id="publications-title" data-i18n="publicationsTitle">Selected publications</h2></div>
+            <div><p class="section-index">04 / PUBLICATIONS</p><h2 id="publications-title" data-i18n="publicationsTitle">Selected publications</h2></div>
             <div class="publication-heading-extra"><p class="section-intro" data-i18n="publicationsIntro">A selection of peer-reviewed work. The complete bibliography is available in my academic CV and Google Scholar profile.</p><a class="inline-link" href="https://scholar.google.gr/citations?hl=en&amp;user=rC9Hv_AAAAAJ" target="_blank" rel="noopener noreferrer"><span data-i18n="viewScholar">View Google Scholar</span> ↗</a></div>
           </div>
           <div class="publication-filters" role="group" aria-label="Filter publications">
@@ -179,22 +218,48 @@
             <article class="publication" data-category="systems"><div class="pub-year">2022</div><div><span class="pub-type">INTERNATIONAL JOURNAL ON ARTIFICIAL INTELLIGENCE TOOLS</span><h3>Computational Argumentation for Medical Device Regulatory Classification</h3><p>Almpani, S., Kiouvrekis, Y., Stefaneas, P., &amp; Frangos, P.</p></div><a href="https://doi.org/10.1142/S0218213022500051" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
             <article class="publication" data-category="systems"><div class="pub-year">2020</div><div><span class="pub-type">PALADYN · JOURNAL OF BEHAVIORAL ROBOTICS</span><h3>ExosCE: A Legal-based Computational System for Compliance with Exoskeletons CE Marking</h3><p>Almpani, S., Mitsikas, T., Stefaneas, P., &amp; Frangos, P.</p></div><a href="https://doi.org/10.1515/pjbr-2020-0026" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
           </div>
-          <div class="section-action"><a class="btn btn-outline" href="Sofia_Almpani_CV.pdf" download><span data-i18n="completeList">Complete publication list in CV</span><span aria-hidden="true">↓</span></a></div>
+          <div class="section-action"><a class="btn btn-outline" href="Sofia_Almpani_CV.pdf" download="Sofia_Almpani_CV.pdf" data-cv-download><span data-i18n="completeList">Complete publication list in CV (English PDF)</span><span aria-hidden="true">↓</span></a></div>
         </div>
       </section>
 
       <section class="section teaching-section" id="teaching" aria-labelledby="teaching-title">
         <div class="container">
-          <div class="section-heading-row"><div><p class="section-index">04 / TEACHING</p><h2 id="teaching-title" data-i18n="teachingTitle">Teaching across disciplines</h2></div><p class="section-intro" data-i18n="teachingIntro">I combine clear conceptual foundations with laboratory practice, worked examples, constructive feedback and independent problem-solving.</p></div>
+          <div class="section-heading-row"><div><p class="section-index">05 / TEACHING</p><h2 id="teaching-title" data-i18n="teachingTitle">Teaching across disciplines</h2></div><p class="section-intro" data-i18n="teachingIntro">I combine clear conceptual foundations with laboratory practice, worked examples, constructive feedback and independent problem-solving.</p></div>
           <div class="teaching-layout">
             <div class="teaching-quote"><span class="quote-symbol" aria-hidden="true">“</span><p data-i18n="teachingPhilosophy">My aim is to help students develop both technical competence and critical, responsible engagement with AI and digital technologies.</p><span class="quote-caption" data-i18n="teachingEthos">TEACHING ETHOS</span></div>
             <div class="teaching-timeline">
-              <div class="timeline-item"><span class="timeline-date">2025–<span data-i18n="present">present</span></span><div><h3 data-i18n="teachingUoa">National and Kapodistrian University of Athens</h3><p data-i18n="teachingUoaBody">Databases, Algorithms and Data Structures, Data Mining and Machine Learning, Space and Cybersecurity.</p></div></div>
-              <div class="timeline-item"><span class="timeline-date">2026–<span data-i18n="present">present</span></span><div><h3 data-i18n="teachingAir">Hellenic Air Force Academy</h3><p data-i18n="teachingAirBody">Big Data and Cloud Computing.</p></div></div>
-              <div class="timeline-item"><span class="timeline-date">2025–2026</span><div><h3 data-i18n="teachingThessaly">University of Thessaly</h3><p data-i18n="teachingThessalyBody">Topics in Computational and Applied Mathematics.</p></div></div>
-              <div class="timeline-item"><span class="timeline-date">2023–2024</span><div><h3 data-i18n="teachingUoaTwo">University of Athens</h3><p data-i18n="teachingUoaTwoBody">Introduction to Programming, Object-Oriented Programming, Python and Machine Learning.</p></div></div>
-              <div class="timeline-item"><span class="timeline-date">2018–2021</span><div><h3 data-i18n="teachingNtua">National Technical University of Athens</h3><p data-i18n="teachingNtuaBody">Teaching assistance in Object-Oriented Programming (Java).</p></div></div>
-              <div class="timeline-item"><span class="timeline-date">2026–<span data-i18n="present">present</span></span><div><h3 data-i18n="teachingPostgrad">Postgraduate programmes</h3><p data-i18n="teachingPostgradBody">Topics in Logic II (inter-university MSc); Disruptive Technologies and Digital Transformation (Neapolis University Pafos).</p></div></div>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">NKUA</span><img src="https://share.uoa.gr/public/Documents/new-logo/LOGO_UOA%20COL2.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingUoa">National and Kapodistrian University of Athens</h3><p class="timeline-date" data-i18n="teachingUoaDate">Adjunct lecturer · Sep 2025–present</p></div></div>
+                <ul class="course-list"><li data-i18n="courseUoaOne">Databases (SQL)</li><li data-i18n="courseUoaTwo">Algorithms, Programming and Data Structures (C)</li><li data-i18n="courseUoaThree">Data Mining and Machine Learning</li><li data-i18n="courseUoaFour">Space and Cybersecurity</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">HAFA</span><img src="https://3.bp.blogspot.com/-lAikQlAJPxk/U9pasXszAEI/AAAAAAAAW1w/ayTG9P_47X8/s640/si-simaia.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingAir">Hellenic Air Force Academy</h3><p class="timeline-date" data-i18n="teachingAirDate">Contract Teaching Personnel · Mar 2026–present</p></div></div>
+                <ul class="course-list"><li data-i18n="courseAirOne">Big Data (Spark, Hadoop, MapReduce, Kafka, MongoDB)</li><li data-i18n="courseAirTwo">Cloud Computing</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">UTH</span><img src="https://www.uth.gr/sites/default/files/contents/logos/UTH-logo-greek.png" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingThessaly">University of Thessaly</h3><p class="timeline-date" data-i18n="teachingThessalyDate">Adjunct lecturer · Sep 2025–Feb 2026</p></div></div>
+                <ul class="course-list"><li data-i18n="courseThessalyOne">Topics in Computational and Applied Mathematics I</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">NKUA</span><img src="https://share.uoa.gr/public/Documents/new-logo/LOGO_UOA%20COL2.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingUoaTwo">University of Athens · Digital Industry Technologies</h3><p class="timeline-date" data-i18n="teachingUoaTwoDate">Seconded educator · Sep 2023–Sep 2024</p></div></div>
+                <ul class="course-list"><li data-i18n="courseUoaTwoOne">Introduction to Programming (C)</li><li data-i18n="courseUoaTwoTwo">Object-Oriented Programming (C++)</li><li data-i18n="courseUoaTwoThree">Machine Learning</li><li data-i18n="courseUoaTwoFour">Python</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">NTUA</span><img src="https://waterborne.eu/images/description/200713_NTUA_logo_high_resolution2.png" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingNtua">National Technical University of Athens</h3><p class="timeline-date" data-i18n="teachingNtuaDate">Teaching Assistant · Sep 2018–Feb 2021</p></div></div>
+                <ul class="course-list"><li data-i18n="courseNtuaOne">Introduction to Object-Oriented Programming (Java)</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">MSc</span><img src="https://waterborne.eu/images/description/200713_NTUA_logo_high_resolution2.png" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingMsc">Inter-university MSc in Logic</h3><p class="timeline-date" data-i18n="teachingMscDate">NTUA · NKUA · Academy of Athens · Feb 2026–present</p></div></div>
+                <ul class="course-list"><li data-i18n="courseMscOne">Topics in Logic II</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">NUP</span><img src="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/6n4sqRUwW4FpoTwQbeVAqvmzyzUqZdB8e6Tz1fVs.webp" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingNeapolis">Neapolis University Pafos</h3><p class="timeline-date" data-i18n="teachingNeapolisDate">Visiting lecturer · 2026–present</p></div></div>
+                <ul class="course-list"><li data-i18n="courseNeapolisOne">Disruptive Technologies (MSc Data Analytics and Financial Technology)</li><li data-i18n="courseNeapolisTwo">Disruptive Technologies and Digital Transformation (MSc Information Systems and Digital Innovation)</li></ul>
+              </article>
+              <article class="teaching-item">
+                <div class="teaching-institution"><span class="institution-logo"><span class="logo-fallback">NKUA</span><img src="https://share.uoa.gr/public/Documents/new-logo/LOGO_UOA%20COL2.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /></span><div><h3 data-i18n="teachingMedical">NKUA Medical School · MSc Applied Biomechanics</h3><p class="timeline-date" data-i18n="teachingMedicalDate">Guest lectures · Mar 2020 &amp; Mar 2026</p></div></div>
+                <ul class="course-list"><li data-i18n="courseMedicalOne">Wearable Robotics and Exoskeletons in Healthcare</li></ul>
+              </article>
             </div>
           </div>
         </div>
@@ -202,7 +267,7 @@
 
       <section class="section service-section" id="service" aria-labelledby="service-title">
         <div class="container">
-          <div class="section-heading-row"><div><p class="section-index">05 / COMMUNITY</p><h2 id="service-title" data-i18n="serviceTitle">Academic service & engagement</h2></div><p class="section-intro" data-i18n="serviceIntro">Research grows through collaboration, mentoring, shared tools and active participation in the scholarly community.</p></div>
+          <div class="section-heading-row"><div><p class="section-index">06 / COMMUNITY</p><h2 id="service-title" data-i18n="serviceTitle">Academic service & engagement</h2></div><p class="section-intro" data-i18n="serviceIntro">Research grows through collaboration, mentoring, shared tools and active participation in the scholarly community.</p></div>
           <div class="service-grid">
             <article class="service-card"><span class="service-small" data-i18n="serviceCategoryOne">EDITORIAL & CONFERENCES</span><h3 data-i18n="serviceOneTitle">Supporting scholarly exchange</h3><p data-i18n="serviceOneBody">Editorial Board member of Studia Humana; scientific and organising committee involvement in SUM 2026, PoEM 2026, UNILOG, Scientix and Rules: Logic and Applications workshops.</p></article>
             <article class="service-card"><span class="service-small" data-i18n="serviceCategoryTwo">COLLABORATION</span><h3 data-i18n="serviceTwoTitle">International research networks</h3><p data-i18n="serviceTwoBody">Collaborations spanning RuleML, the University of Twente, Jadavpur University, the Hellenic-Romanian Logic and Computation Group, and European robotics and STEM education networks.</p></article>
@@ -213,7 +278,7 @@
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="container contact-layout"><div><p class="section-index light-index">06 / CONTACT</p><h2 id="contact-title" data-i18n="contactTitle">Let’s connect around research.</h2><p data-i18n="contactBody">I welcome conversations about trustworthy AI, computational argumentation, research collaborations and interdisciplinary teaching.</p></div><div class="contact-actions"><a class="btn btn-light" href="mailto:salmpani@mail.ntua.gr"><span data-i18n="contactEmail">Get in touch</span><span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:salmpani@mail.ntua.gr">salmpani@mail.ntua.gr</a></div></div>
+        <div class="container contact-layout"><div><p class="section-index light-index">07 / CONTACT</p><h2 id="contact-title" data-i18n="contactTitle">Let’s connect around research.</h2><p data-i18n="contactBody">I welcome conversations about trustworthy AI, computational argumentation, research collaborations and interdisciplinary teaching.</p></div><div class="contact-actions"><a class="btn btn-light" href="mailto:salmpani@mail.ntua.gr"><span data-i18n="contactEmail">Get in touch</span><span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:salmpani@mail.ntua.gr">salmpani@mail.ntua.gr</a></div></div>
       </section>
     </main>
 
