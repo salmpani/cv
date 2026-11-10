@@ -1,0 +1,46 @@
+/* Selected frame treatments. All other site elements retain their existing style. */
+
+/* Research B: editorial marker — an open left rule and a light base line. */
+.research-card {
+  border: 0;
+  border-left: 7px solid #126e91;
+  border-bottom: 1px solid #c9e0e6;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  padding: 31px 29px 27px;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.research-card:nth-child(2) { border-left-color: #1ab6cf; }
+.research-card:nth-child(3) { border-left-color: #b23b84; }
+.research-card:hover {
+  transform: translateY(-2px);
+  background-color: #faffff;
+  box-shadow: none;
+}
+.research-card h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(24px, 2vw, 27px);
+  line-height: 1.25;
+  letter-spacing: -.015em;
+  font-weight: 500;
+}
+.research-keyword {
+  color: #ac337b;
+  border-top-color: #d9eaf0;
+}
+
+/* Teaching A: precision outline — a consistent cyan border and top marker. */
+.teaching-item,
+.teaching-item:nth-child(3n+2),
+.teaching-item:nth-child(3n) {
+  border: 1px solid #90d0dc;
+  border-top: 4px solid #19b7cb;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: none;
+}
+
+@media (max-width: 590px) {
+  .research-card { padding: 26px 22px 24px; }
+}

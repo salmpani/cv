@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#14283f" />
+    <meta name="theme-color" content="#f5f7f8" />
     <meta name="description" content="Academic website of Dr Sofia Almpani — research in trustworthy and human-centred AI, computational argumentation, formal reasoning, and intelligent systems." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dr Sofia Almpani | Trustworthy & Human-Centred AI" />
@@ -11,15 +11,44 @@
     <title>Dr Sofia Almpani · Academic Research Portfolio</title>
     <link rel="icon" href="academic-seal-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme-v5.css" />
+    <link rel="stylesheet" href="theme-v6.css" />
+    <link rel="stylesheet" href="theme-v7.css" />
+    <link rel="stylesheet" href="theme-v8.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sofia Almpani",
+        "honorificPrefix": "Dr",
+        "jobTitle": ["Postdoctoral Researcher", "Adjunct Lecturer"],
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "National Technical University of Athens"
+        },
+        "knowsAbout": [
+          "Trustworthy Artificial Intelligence",
+          "Computational Argumentation",
+          "Formal Reasoning",
+          "Human-Centered AI"
+        ],
+        "sameAs": [
+          "https://orcid.org/0000-0003-4823-479X",
+          "https://scholar.google.gr/citations?hl=en&user=rC9Hv_AAAAAJ",
+          "https://www.researchgate.net/profile/Sofia-Almpani",
+          "https://www.linkedin.com/in/sofia-almpani/"
+        ]
+      }
+    </script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skipContent">Skip to content</a>
     <div class="reading-progress" aria-hidden="true"><span id="reading-bar"></span></div>
 
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a href="#top" class="brand" aria-label="Sofia Almpani, homepage">
+        <a href="#about" class="brand" aria-label="Sofia Almpani, homepage">
           <span class="brand-mark"><img src="academic-seal-mark.svg" alt="" width="52" height="52" /></span>
           <span class="brand-name">SOFIA ALMPANI</span>
         </a>
@@ -51,13 +80,15 @@
             </div>
             <h1 id="hero-title" data-i18n="heroTitle">Trustworthy AI, grounded in <em>reasoning.</em></h1>
             <p class="hero-description" data-i18n="heroDescription">I explore how computational argumentation and formal reasoning can make intelligent systems more transparent, accountable and responsive to human needs.</p>
-            <p class="hero-affiliation"><span class="affiliation-pulse"></span><span data-i18n="heroAffiliation">Postdoctoral Researcher · National Technical University of Athens</span></p>
+            <p class="hero-affiliation"><span class="affiliation-pulse"></span><span data-i18n="heroAffiliation">Postdoctoral Researcher (NTUA) · Adjunct Lecturer</span></p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#research"><span data-i18n="exploreResearch">Explore my research</span><span aria-hidden="true">↗</span></a>
               <a class="btn btn-outline" href="Sofia_Almpani_CV.pdf" download="Sofia_Almpani_CV.pdf" data-cv-download><span data-i18n="downloadCv">Download CV (English PDF)</span><span aria-hidden="true">↓</span></a>
             </div>
             <div class="hero-social" aria-label="Academic profiles">
               <a href="https://scholar.google.gr/citations?hl=en&amp;user=rC9Hv_AAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+              <span aria-hidden="true">·</span>
+              <a href="https://orcid.org/0000-0003-4823-479X" target="_blank" rel="me noopener noreferrer" aria-label="ORCID profile, 0000-0003-4823-479X">ORCID <span aria-hidden="true">↗</span></a>
               <span aria-hidden="true">·</span>
               <a href="https://www.researchgate.net/profile/Sofia-Almpani" target="_blank" rel="noopener noreferrer">ResearchGate <span aria-hidden="true">↗</span></a>
               <span aria-hidden="true">·</span>
@@ -69,16 +100,16 @@
             <div class="visual-topline"><span data-i18n="visualLabel">RESEARCH CONNECTIONS</span></div>
             <div class="reasoning-graphic" aria-hidden="true">
               <svg class="network-lines" viewBox="0 0 380 365" preserveAspectRatio="xMidYMid meet">
-                <circle cx="190" cy="184" r="120" fill="none" stroke="#dcc7bb" stroke-width="1" stroke-dasharray="4 8" />
-                <path d="M190 184 L87 84 M190 184 L296 104 M190 184 L275 281" stroke="#c69378" stroke-width="2" fill="none" />
-                <circle cx="190" cy="184" r="67" fill="#183650" />
-                <circle cx="87" cy="84" r="34" fill="#f5e8de" stroke="#d1a38b" />
-                <circle cx="296" cy="104" r="34" fill="#f5e8de" stroke="#d1a38b" />
-                <circle cx="275" cy="281" r="34" fill="#f5e8de" stroke="#d1a38b" />
-                <circle cx="190" cy="184" r="8" fill="#e9b594" />
-                <circle cx="87" cy="84" r="6" fill="#a44931" />
-                <circle cx="296" cy="104" r="6" fill="#a44931" />
-                <circle cx="275" cy="281" r="6" fill="#a44931" />
+                <circle cx="190" cy="184" r="120" fill="none" stroke="#b7dce7" stroke-width="1" stroke-dasharray="4 8" />
+                <path d="M190 184 L87 84 M190 184 L296 104 M190 184 L275 281" stroke="#17a9c2" stroke-width="2" fill="none" />
+                <circle cx="190" cy="184" r="67" fill="#123e62" />
+                <circle cx="87" cy="84" r="34" fill="#e7f9fc" stroke="#48c8d8" />
+                <circle cx="296" cy="104" r="34" fill="#e7f9fc" stroke="#48c8d8" />
+                <circle cx="275" cy="281" r="34" fill="#e7f9fc" stroke="#48c8d8" />
+                <circle cx="190" cy="184" r="8" fill="#f2ce55" />
+                <circle cx="87" cy="84" r="6" fill="#16aac6" />
+                <circle cx="296" cy="104" r="6" fill="#be3987" />
+                <circle cx="275" cy="281" r="6" fill="#e8c54e" />
               </svg>
               <span class="orbit-label label-top-left" data-i18n="orbitFormal">FORMAL<br />REASONING</span>
               <span class="orbit-label label-top-right" data-i18n="orbitExplain">EXPLAINABLE<br />AI</span>
@@ -88,11 +119,12 @@
             <div class="visual-footer"><span data-i18n="visualFoot">FROM LOGIC TO REAL-WORLD IMPACT</span><span aria-hidden="true">↗</span></div>
           </aside>
         </div>
-        <div class="container hero-bottom">
-          <div><span class="fact-label" data-i18n="factOneLabel">RESEARCH FOCUS</span><strong data-i18n="factOne">Trustworthy AI</strong></div>
-          <div><span class="fact-label" data-i18n="factTwoLabel">ACADEMIC POSITION</span><strong data-i18n="factTwo">Postdoctoral Researcher · Adjunct Professor</strong></div>
-          <div><span class="fact-label" data-i18n="factThreeLabel">RESEARCH OUTPUTS</span><strong data-i18n="factThree">40+ scholarly works</strong></div>
+        <div class="container hero-bottom" aria-label="Academic work at a glance">
+          <div><span class="fact-label" data-i18n="factOneLabel">JOURNAL ARTICLES</span><strong class="stat-number">14</strong><span class="stat-description" data-i18n="factOne">Peer-reviewed journal publications</span></div>
+          <div><span class="fact-label" data-i18n="factTwoLabel">CONFERENCE CONTRIBUTIONS</span><strong class="stat-number">25</strong><span class="stat-description" data-i18n="factTwo">Publications and presentations</span></div>
+          <div><span class="fact-label" data-i18n="factThreeLabel">SELECTED PROJECTS</span><strong class="stat-number">06</strong><span class="stat-description" data-i18n="factThree">Research and innovation projects</span></div>
         </div>
+        <p class="container stat-source" data-i18n="statSource">Based on the academic CV (October 2026); conference contributions include works under publication.</p>
       </section>
 
       <section class="section highlights-section" id="highlights" aria-labelledby="highlights-title">
@@ -101,31 +133,46 @@
             <div><p class="section-index">01 / NEWS &amp; HIGHLIGHTS</p><h2 id="highlights-title" data-i18n="highlightsTitle">Recent milestones</h2></div>
             <p class="section-intro" data-i18n="highlightsIntro">Selected publications, recognition and mentoring highlights from my recent academic work.</p>
           </div>
-          <div class="highlights-grid">
-            <article class="highlight-card">
+          <div class="news-carousel" id="highlights-carousel" role="region" aria-roledescription="carousel" aria-label="News and highlights">
+          <div class="highlights-grid" aria-live="polite" aria-atomic="true">
+            <article class="highlight-card highlight-feature">
               <div class="highlight-meta"><time datetime="2026-10-21">21–23 OCT 2026</time><span data-i18n="highlightSumType">CONFERENCE</span></div>
               <h3 data-i18n="highlightSumTitle">Chairing the SUM 2026 local committee</h3>
               <p data-i18n="highlightSumBody">Local Committee Chair for the 17th International Conference on Scalable Uncertainty Management, hosted by NTUA in Athens.</p>
               <a href="https://sum2026.math.ntua.gr/?page_id=740" target="_blank" rel="noopener noreferrer"><span data-i18n="highlightSumLink">SUM 2026 committee</span><span aria-hidden="true"> ↗</span></a>
             </article>
-            <article class="highlight-card">
+            <article class="highlight-card highlight-story">
               <div class="highlight-meta"><time datetime="2026">2026</time><span data-i18n="highlightOneType">RESEARCH</span></div>
               <h3 data-i18n="highlightOneTitle">New work on trustworthy AI and argumentation</h3>
               <p data-i18n="highlightOneBody">Three journal articles on human-centred AI, collaborative argumentation and requirements for countering hostile narratives.</p>
               <a href="#publications"><span data-i18n="highlightRead">Explore publications</span><span aria-hidden="true"> ↗</span></a>
             </article>
-            <article class="highlight-card">
+            <article class="highlight-card highlight-story">
               <div class="highlight-meta"><time datetime="2026">2026</time><span data-i18n="highlightTwoType">MENTORING</span></div>
               <h3 data-i18n="highlightTwoTitle">Perseus student team recognised</h3>
               <p data-i18n="highlightTwoBody">Mentoring the Perseus team in cybersecurity and unmanned aerial systems, recognised with a Youth Entrepreneurship Award.</p>
               <a href="https://www.facebook.com/photo?fbid=986905237796243&amp;set=a.143709362115839" target="_blank" rel="noopener noreferrer"><span data-i18n="highlightMentoring">See the Perseus award</span><span aria-hidden="true"> ↗</span></a>
             </article>
-            <article class="highlight-card">
+            <article class="highlight-card highlight-story">
               <div class="highlight-meta"><time datetime="2025">2025</time><span data-i18n="highlightThreeType">AWARD</span></div>
               <h3 data-i18n="highlightThreeTitle">Best Paper Award</h3>
               <p data-i18n="highlightThreeBody">Recognition for work on a logical reasoning system supporting compliance with data protection regulations.</p>
               <a href="Sofia_Almpani_CV.pdf" download="Sofia_Almpani_CV.pdf" data-cv-download><span data-i18n="highlightDetails">Details in academic CV</span><span aria-hidden="true"> ↓</span></a>
             </article>
+          </div>
+          <div class="carousel-controls">
+            <div class="carousel-position" aria-label="Current highlight"><span id="highlight-current">01</span><span aria-hidden="true"> / </span><span id="highlight-total">04</span></div>
+            <div class="carousel-dots" id="highlight-dots" role="group" aria-label="Choose a highlight">
+              <button class="carousel-dot" type="button" data-slide="0" aria-label="Highlight 1" aria-current="true"></button>
+              <button class="carousel-dot" type="button" data-slide="1" aria-label="Highlight 2"></button>
+              <button class="carousel-dot" type="button" data-slide="2" aria-label="Highlight 3"></button>
+              <button class="carousel-dot" type="button" data-slide="3" aria-label="Highlight 4"></button>
+            </div>
+            <div class="carousel-arrows">
+              <button class="carousel-arrow" id="highlight-prev" type="button" aria-label="Previous highlight"><span aria-hidden="true">←</span><span data-i18n="carouselPrevious">Previous</span></button>
+              <button class="carousel-arrow" id="highlight-next" type="button" aria-label="Next highlight"><span data-i18n="carouselNext">Next</span><span aria-hidden="true">→</span></button>
+            </div>
+          </div>
           </div>
           <details class="highlights-archive">
             <summary><span data-i18n="archiveToggle">View earlier highlights</span><span class="archive-chevron" aria-hidden="true">⌄</span></summary>
@@ -234,10 +281,11 @@
             <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false" data-i18n="filterSystems">Systems & security</button>
             <button type="button" class="filter-btn" data-filter="education" aria-pressed="false" data-i18n="filterEducation">Education & robotics</button>
           </div>
+          <p class="visually-hidden" id="publication-filter-status" role="status" aria-live="polite"></p>
           <div class="publication-list">
-            <article class="publication" data-category="systems"><div class="pub-year">2026</div><div><span class="pub-type">REQUIREMENTS ENGINEERING · JOURNAL</span><h3>Requirements Engineering for Countering Hostile Narratives: A Vision for Socio-technical Intervention Systems beyond Detection</h3><p>Almpani, S., Loucopoulos, P., &amp; Plithas, A.</p></div><a href="https://doi.org/10.1007/s00766-026-00473-w" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
-            <article class="publication" data-category="reasoning"><div class="pub-year">2026</div><div><span class="pub-type">INTERNATIONAL JOURNAL ON ARTIFICIAL INTELLIGENCE TOOLS</span><h3>Exploring the Role of Argumentation in Human-Centered Artificial Intelligence: Communication, Collaboration, and Trust</h3><p>Almpani, S., &amp; Stefaneas, P.</p></div><a href="https://doi.org/10.1142/S0218213026500144" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
-            <article class="publication" data-category="reasoning"><div class="pub-year">2026</div><div><span class="pub-type">REQUIREMENTS ENGINEERING · JOURNAL</span><h3>A Collaborative Argumentation Framework for Goal-Oriented Reasoning</h3><p>Almpani, S., Gantzounis, A., &amp; Stefaneas, P.</p></div><a href="https://doi.org/10.1007/s00766-026-00461-0" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
+            <article class="publication publication-featured" data-category="systems"><div class="pub-year">2026</div><div><span class="pub-type">REQUIREMENTS ENGINEERING · JOURNAL</span><h3>Requirements Engineering for Countering Hostile Narratives: A Vision for Socio-technical Intervention Systems beyond Detection</h3><p>Almpani, S., Loucopoulos, P., &amp; Plithas, A.</p><p class="publication-insight"><strong data-i18n="contributionLabel">Research contribution</strong><span data-i18n="impactNarratives">Outlines requirements for context-aware, accountable interventions against hostile online narratives beyond content detection.</span></p></div><a href="https://doi.org/10.1007/s00766-026-00473-w" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
+            <article class="publication publication-featured" data-category="reasoning"><div class="pub-year">2026</div><div><span class="pub-type">INTERNATIONAL JOURNAL ON ARTIFICIAL INTELLIGENCE TOOLS</span><h3>Exploring the Role of Argumentation in Human-Centered Artificial Intelligence: Communication, Collaboration, and Trust</h3><p>Almpani, S., &amp; Stefaneas, P.</p><p class="publication-insight"><strong data-i18n="contributionLabel">Research contribution</strong><span data-i18n="impactHumanAi">Connects argumentation with communication and trust in human–AI collaboration, introducing a formal reasoning framework.</span></p></div><a href="https://doi.org/10.1142/S0218213026500144" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
+            <article class="publication publication-featured" data-category="reasoning"><div class="pub-year">2026</div><div><span class="pub-type">REQUIREMENTS ENGINEERING · JOURNAL</span><h3>A Collaborative Argumentation Framework for Goal-Oriented Reasoning</h3><p>Almpani, S., Gantzounis, A., &amp; Stefaneas, P.</p><p class="publication-insight"><strong data-i18n="contributionLabel">Research contribution</strong><span data-i18n="impactCollaborative">Integrates individual and collective reasoning in APEC–PS to make collaborative, goal-oriented decisions traceable.</span></p></div><a href="https://doi.org/10.1007/s00766-026-00461-0" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
             <article class="publication" data-category="education"><div class="pub-year">2025</div><div><span class="pub-type">JOURNAL OF MATHEMATICS, SCIENCE AND TECHNOLOGY EDUCATION</span><h3>Analysing Pre-primary Students’ Mathematics Performance through the Use of Educational Construction Toys</h3><p>Sofroniou, A., Premnath, B., Sisamos, C., Almpani, S., &amp; Sisamou, E.</p></div><a href="https://doi.org/10.12973/jmste.2.1.19" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
             <article class="publication" data-category="reasoning"><div class="pub-year">2025</div><div><span class="pub-type">JOURNAL OF HUMANISTIC MATHEMATICS</span><h3>A Dualistic Interpretation of Mathematical Creation through Art and Argumentation</h3><p>Almpani, S., Stefaneas, P., &amp; Chakraborty, M.</p></div><a href="https://scholarship.claremont.edu/jhm/vol15/iss2/11" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></article>
             <article class="publication" data-category="reasoning"><div class="pub-year">2023</div><div><span class="pub-type">FOUNDATIONS OF SCIENCE</span><h3>Bridging Informal Reasoning and Formal Proving: The Role of Argumentation in Proof-Events</h3><p>Almpani, S., &amp; Stefaneas, P.</p></div><a href="https://doi.org/10.1007/s10699-023-09926-9" target="_blank" rel="noopener noreferrer" aria-label="Open publication DOI">↗</a></article>
@@ -308,6 +356,6 @@
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-layout"><span>© 2026 Dr Sofia Almpani</span><span data-i18n="footerUpdated">Academic portfolio · Updated November 2026</span><a href="#top" data-i18n="backTop">Back to top ↑</a></div></footer>
+    <footer class="site-footer"><div class="container footer-layout"><span>© 2026 Dr Sofia Almpani</span><span data-i18n="footerUpdated">Academic portfolio · Updated November 2026</span><a href="#about" data-i18n="backTop">Back to top ↑</a></div></footer>
   </body>
 </html>

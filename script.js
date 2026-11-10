@@ -3,19 +3,21 @@
   'use strict';
 
   const greek = {
+    skipContent: 'Μετάβαση στο κύριο περιεχόμενο',
     navAbout: 'Σχετικά', navHighlights: 'Νέα', navResearch: 'Έρευνα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
     navTeaching: 'Διδασκαλία', navService: 'Ακαδημαϊκή προσφορά', navContact: 'Επικοινωνία',
     heroEyebrow: 'ΕΡΕΥΝΗΤΡΙΑ · ΔΙΔΑΣΚΟΥΣΑ · ΠΡΟΓΡΑΜΜΑΤΙΣΤΡΙΑ',
     heroTitle: 'Αξιόπιστη ΤΝ με θεμέλιο τη <em>συλλογιστική.</em>',
     heroDescription: 'Ερευνώ πώς η υπολογιστική επιχειρηματολογία και η τυπική συλλογιστική μπορούν να καταστήσουν τα ευφυή συστήματα πιο διαφανή, υπεύθυνα και προσανατολισμένα στις ανθρώπινες ανάγκες.',
-    heroAffiliation: 'Μεταδιδακτορική ερευνήτρια · Εθνικό Μετσόβιο Πολυτεχνείο',
+    heroAffiliation: 'Μεταδιδακτορική ερευνήτρια (ΕΜΠ) · Εντεταλμένη διδάσκουσα',
     exploreResearch: 'Εξερεύνησε την έρευνά μου', downloadCv: 'Λήψη βιογραφικού (Ελληνικά PDF)',
     visualLabel: 'ΕΡΕΥΝΗΤΙΚΕΣ ΣΥΝΔΕΣΕΙΣ', visualFoot: 'ΑΠΟ ΤΗ ΛΟΓΙΚΗ ΣΤΙΣ ΕΦΑΡΜΟΓΕΣ',
     orbitFormal: 'ΤΥΠΙΚΗ<br>ΣΥΛΛΟΓΙΣΤΙΚΗ', orbitExplain: 'ΕΞΗΓΗΣΙΜΗ<br>ΤΝ',
     orbitSystems: 'ΕΥΦΥΗ<br>ΣΥΣΤΗΜΑΤΑ', orbitCore: 'ΑΝΘΡΩΠΟ-<br>ΚΕΝΤΡΙΚΗ<br>ΤΝ',
-    factOneLabel: 'ΕΡΕΥΝΗΤΙΚΟ ΠΕΔΙΟ', factOne: 'Αξιόπιστη ΤΝ',
-    factTwoLabel: 'ΑΚΑΔΗΜΑΪΚΗ ΘΕΣΗ', factTwo: 'Μεταδιδακτορική ερευνήτρια · Εντεταλμένη διδάσκουσα',
-    factThreeLabel: 'ΕΠΙΣΤΗΜΟΝΙΚΟ ΕΡΓΟ', factThree: '40+ επιστημονικές εργασίες',
+    factOneLabel: 'ΑΡΘΡΑ ΣΕ ΠΕΡΙΟΔΙΚΑ', factOne: 'Δημοσιεύσεις με κρίση',
+    factTwoLabel: 'ΣΥΝΕΔΡΙΑΚΕΣ ΣΥΝΕΙΣΦΟΡΕΣ', factTwo: 'Εργασίες και παρουσιάσεις',
+    factThreeLabel: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ', factThree: 'Έργα έρευνας και καινοτομίας',
+    statSource: 'Στοιχεία από το ακαδημαϊκό βιογραφικό (Οκτώβριος 2026)· οι συνεδριακές συνεισφορές περιλαμβάνουν και εργασίες υπό δημοσίευση.',
     highlightsTitle: 'Πρόσφατα νέα και διακρίσεις',
     highlightsIntro: 'Επιλεγμένες δημοσιεύσεις, διακρίσεις και δράσεις καθοδήγησης από την πρόσφατη ακαδημαϊκή μου δραστηριότητα.',
     highlightSumType: 'ΣΥΝΕΔΡΙΟ',
@@ -31,6 +33,7 @@
     highlightThreeType: 'ΒΡΑΒΕΙΟ', highlightThreeTitle: 'Βραβείο Καλύτερης Εργασίας',
     highlightThreeBody: 'Διάκριση για την ανάπτυξη συστήματος λογικής συλλογιστικής που υποστηρίζει τη συμμόρφωση με τη νομοθεσία προστασίας δεδομένων.',
     highlightDetails: 'Λεπτομέρειες στο βιογραφικό',
+    carouselPrevious: 'Προηγούμενο', carouselNext: 'Επόμενο',
     archiveToggle: 'Δείτε παλαιότερες σημαντικές στιγμές',
     archiveOneType: 'ΕΡΕΥΝΑ', archiveOneTitle: 'Διάκριση μεταδιδακτορικής έρευνας',
     archiveOneBody: 'Υποτροφία «Χ. Παπακυριακόπουλος» στο ΕΜΠ για τα Μαθηματικά της Πληροφορικής.',
@@ -75,6 +78,10 @@
     projectsFootnote: 'Στο βιογραφικό παρουσιάζονται περισσότερες πληροφορίες για τον ρόλο και την ερευνητική μου συμβολή σε κάθε έργο.',
     publicationsTitle: 'Επιλεγμένες δημοσιεύσεις',
     publicationsIntro: 'Επιλογή εργασιών με κρίση. Ο πλήρης κατάλογος βρίσκεται στο ακαδημαϊκό CV και στο προφίλ Google Scholar.',
+    contributionLabel: 'Ερευνητική συμβολή',
+    impactNarratives: 'Διαμορφώνει απαιτήσεις για παρεμβάσεις κατά εχθρικών διαδικτυακών αφηγημάτων, πέρα από την απλή ανίχνευση περιεχομένου, με έμφαση στο πλαίσιο και τη λογοδοσία.',
+    impactHumanAi: 'Συνδέει την επιχειρηματολογία με την επικοινωνία και την εμπιστοσύνη στη συνεργασία ανθρώπων και ΤΝ, εισάγοντας ένα τυπικό πλαίσιο συλλογιστικής.',
+    impactCollaborative: 'Συνδυάζει την ατομική και τη συλλογική συλλογιστική στο APEC–PS, υποστηρίζοντας την ιχνηλασιμότητα συνεργατικών αποφάσεων με στόχους.',
     viewScholar: 'Προβολή στο Google Scholar', filterAll: 'Όλες οι επιλεγμένες',
     filterReasoning: 'ΤΝ & συλλογιστική', filterSystems: 'Συστήματα & ασφάλεια',
     filterEducation: 'Εκπαίδευση & ρομποτική', completeList: 'Πλήρης κατάλογος στο βιογραφικό (Ελληνικά PDF)',
@@ -130,6 +137,11 @@
   const languageButton = document.getElementById('language-toggle');
   const cvLinks = [...document.querySelectorAll('[data-cv-download]')];
   const portrait = document.querySelector('.hero-portrait');
+  const mainNavigation = document.getElementById('site-nav');
+  const profileLinks = document.querySelector('.hero-social');
+  const researchVisual = document.querySelector('.hero-visual');
+  const academicStats = document.querySelector('.hero-bottom');
+  const publicationFilters = document.querySelector('.publication-filters');
 
   function setLanguage(language) {
     const isGreek = language === 'el';
@@ -153,6 +165,11 @@
     if (portrait) portrait.alt = isGreek ? 'Η Δρ Σοφία Αλμπάνη παρουσιάζει σε ακαδημαϊκή εκδήλωση' : 'Dr Sofia Almpani presenting at an academic event';
     languageButton.setAttribute('aria-label', isGreek ? 'Switch to English' : 'Μετάβαση στα Ελληνικά');
     languageButton.title = isGreek ? 'Switch to English' : 'Ελληνικά';
+    mainNavigation.setAttribute('aria-label', isGreek ? 'Κεντρική πλοήγηση' : 'Main navigation');
+    profileLinks.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκά προφίλ' : 'Academic profiles');
+    researchVisual.setAttribute('aria-label', isGreek ? 'Ερευνητικά πεδία' : 'Research themes');
+    academicStats.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκό έργο με μια ματιά' : 'Academic work at a glance');
+    publicationFilters.setAttribute('aria-label', isGreek ? 'Φιλτράρισμα δημοσιεύσεων' : 'Filter publications');
     document.title = isGreek ? 'Δρ Σοφία Αλμπάνη · Ακαδημαϊκή Ιστοσελίδα' : 'Dr Sofia Almpani · Academic Research Portfolio';
     try { localStorage.setItem('sofia-portfolio-language', isGreek ? 'el' : 'en'); } catch { /* storage may be unavailable */ }
   }
@@ -181,6 +198,13 @@
 
   const filterButtons = [...document.querySelectorAll('.filter-btn')];
   const publications = [...document.querySelectorAll('.publication')];
+  const publicationFilterStatus = document.getElementById('publication-filter-status');
+  function updateFilterAnnouncement() {
+    const count = publications.filter(item => !item.hidden).length;
+    publicationFilterStatus.textContent = document.documentElement.lang === 'el'
+      ? `Προβάλλονται ${count} δημοσιεύσεις.`
+      : `Showing ${count} publications.`;
+  }
   filterButtons.forEach(button => button.addEventListener('click', () => {
     const selected = button.dataset.filter;
     filterButtons.forEach(item => {
@@ -189,7 +213,76 @@
       item.setAttribute('aria-pressed', String(active));
     });
     publications.forEach(item => { item.hidden = selected !== 'all' && item.dataset.category !== selected; });
+    updateFilterAnnouncement();
   }));
+  languageButton.addEventListener('click', updateFilterAnnouncement);
+  updateFilterAnnouncement();
+
+  // Give icon-only publication links a distinct, meaningful accessible name.
+  function updatePublicationLinkLabels() {
+    publications.forEach(item => {
+      const title = item.querySelector('h3')?.textContent?.trim();
+      const link = item.querySelector('a[href]');
+      if (title && link) link.setAttribute('aria-label', document.documentElement.lang === 'el'
+        ? `Άνοιγμα δημοσίευσης: ${title}`
+        : `Read publication: ${title}`);
+    });
+  }
+  languageButton.addEventListener('click', updatePublicationLinkLabels);
+  updatePublicationLinkLabels();
+
+  // News carousel: explicit navigation, no autoplay, works with keyboard and touch.
+  const carousel = document.getElementById('highlights-carousel');
+  if (carousel) {
+    const slides = [...carousel.querySelectorAll('.highlight-card')];
+    const dots = [...carousel.querySelectorAll('.carousel-dot')];
+    const previous = document.getElementById('highlight-prev');
+    const next = document.getElementById('highlight-next');
+    const position = document.getElementById('highlight-current');
+    document.getElementById('highlight-total').textContent = String(slides.length).padStart(2, '0');
+    let selected = 0;
+
+    function showHighlight(index) {
+      selected = (index + slides.length) % slides.length;
+      const greekSelected = document.documentElement.lang === 'el';
+      slides.forEach((slide, i) => {
+        const active = i === selected;
+        slide.hidden = !active;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-roledescription', 'slide');
+        slide.setAttribute('aria-label', `${greekSelected ? 'Νέο' : 'Highlight'} ${i + 1} ${greekSelected ? 'από' : 'of'} ${slides.length}`);
+      });
+      dots.forEach((dot, i) => {
+        const active = i === selected;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-pressed', String(active));
+        dot.setAttribute('aria-label', `${greekSelected ? 'Προβολή νέου' : 'Show highlight'} ${i + 1}`);
+      });
+      previous.setAttribute('aria-label', greekSelected ? 'Προηγούμενο νέο' : 'Previous highlight');
+      next.setAttribute('aria-label', greekSelected ? 'Επόμενο νέο' : 'Next highlight');
+      position.textContent = String(selected + 1).padStart(2, '0');
+    }
+
+    previous.addEventListener('click', () => showHighlight(selected - 1));
+    next.addEventListener('click', () => showHighlight(selected + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showHighlight(i)));
+    carousel.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); showHighlight(selected - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); showHighlight(selected + 1); }
+    });
+    let touchStartX = null;
+    carousel.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0]?.clientX ?? null;
+    }, { passive: true });
+    carousel.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const distance = (event.changedTouches[0]?.clientX ?? touchStartX) - touchStartX;
+      if (Math.abs(distance) > 55) showHighlight(selected + (distance < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+    languageButton.addEventListener('click', () => showHighlight(selected));
+    showHighlight(0);
+  }
 
   const readingBar = document.getElementById('reading-bar');
   let scheduled = false;
@@ -202,5 +295,33 @@
   window.addEventListener('scroll', () => {
     if (!scheduled) { scheduled = true; requestAnimationFrame(updateProgress); }
   }, { passive: true });
+
+  // Page-like navigation: each top-level section has its own view, URL hash,
+  // back/forward history entry, and active menu item. Without JavaScript,
+  // all content remains available as an ordinary long-form page.
+  const pages = [...document.querySelectorAll('main > section[id]')];
+  const pageLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+  function showPage(scrollToStart = true) {
+    const requested = decodeURIComponent(window.location.hash.slice(1)) || 'about';
+    const page = pages.find(item => item.id === requested) || pages[0];
+    pages.forEach(item => { item.hidden = item !== page; });
+    pageLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${page.id}`) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    document.body.dataset.currentView = page.id;
+    closeMenu();
+    if (scrollToStart) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      const heading = page.querySelector('h1,h2');
+      if (heading) {
+        heading.tabIndex = -1;
+        heading.focus({ preventScroll: true });
+      }
+    }
+    requestAnimationFrame(updateProgress);
+  }
+  window.addEventListener('hashchange', () => showPage());
+  showPage(false);
   updateProgress();
 })();
