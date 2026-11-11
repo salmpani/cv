@@ -644,19 +644,21 @@ h2 { color: #103e61; }
 /* Bundled from theme-v7.css */
 /* Selected frame treatments. All other site elements retain their existing style. */
 
-/* Research B: editorial marker — an open left rule and a light base line. */
+/* Research B: open editorial composition with geometric symbols, no lines. */
+.research-grid { gap: clamp(16px, 2.5vw, 32px); }
 .research-card {
   border: 0;
-  border-left: 8px solid #126e91;
-  border-bottom: 1px solid #c9e0e6;
+  border-left: 0;
+  border-bottom: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  padding: 30px 29px 27px;
-  transition: border-color .2s ease;
+  min-height: 0;
+  padding: 10px 12px 17px;
+  transition: none;
 }
-.research-card:nth-child(2) { border-left-color: #1ab6cf; }
-.research-card:nth-child(3) { border-left-color: #b23b84; }
+.research-card:nth-child(2),
+.research-card:nth-child(3) { border: 0; }
 .research-card:hover {
   transform: none;
   background-color: transparent;
@@ -671,14 +673,35 @@ h2 { color: #103e61; }
 }
 .research-card .card-number { color: #ad367b; }
 .research-card .research-icon {
-  font-size: 36px;
-  margin-top: 15px;
-  margin-bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  font-size: 38px;
+  margin-top: 17px;
+  margin-bottom: 21px;
+  background: #e0f4f8;
+  color: #086e91;
+}
+.research-card:nth-child(2) .research-icon {
+  background: #fcf2d8;
+  color: #986e10;
+}
+.research-card:nth-child(3) .research-icon {
+  background: #f9e7f0;
+  color: #af337c;
 }
 .research-keyword {
   color: #ac337b;
-  border-top-color: #d9eaf0;
+  border: 0;
+  padding-top: 7px;
 }
+.research-vision { border-left: 0; }
+
+/* About combines the profile, research directions and academic contributions. */
+body[data-current-view="about"] .hero { padding-bottom: 47px; }
+body[data-current-view="about"] .research-section { padding-block: 52px 64px; }
+body[data-current-view="about"] .service-section { padding-block: 55px 90px; }
 
 /* Teaching A: precision outline — a consistent cyan border and top marker. */
 .teaching-item,
@@ -819,11 +842,9 @@ main > section h1:focus-visible, main > section h2:focus-visible {
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="#about" data-i18n="navAbout">About</a>
           <a href="#highlights" data-i18n="navHighlights">Highlights</a>
-          <a href="#research" data-i18n="navResearch">Research</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#publications" data-i18n="navPublications">Publications</a>
           <a href="#teaching" data-i18n="navTeaching">Teaching</a>
-          <a href="#service" data-i18n="navService">Service</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
         <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Greek" title="Switch language">ΕΛ</button>
@@ -880,12 +901,6 @@ main > section h1:focus-visible, main > section h2:focus-visible {
             <div class="visual-footer"><span data-i18n="visualFoot">FROM LOGIC TO REAL-WORLD IMPACT</span><span aria-hidden="true">↗</span></div>
           </aside>
         </div>
-        <div class="container hero-bottom" aria-label="Academic work at a glance">
-          <div><span class="fact-label" data-i18n="factOneLabel">JOURNAL ARTICLES</span><strong class="stat-number">14</strong><span class="stat-description" data-i18n="factOne">Peer-reviewed journal publications</span></div>
-          <div><span class="fact-label" data-i18n="factTwoLabel">CONFERENCE CONTRIBUTIONS</span><strong class="stat-number">25</strong><span class="stat-description" data-i18n="factTwo">Publications and presentations</span></div>
-          <div><span class="fact-label" data-i18n="factThreeLabel">SELECTED PROJECTS</span><strong class="stat-number">06</strong><span class="stat-description" data-i18n="factThree">Research and innovation projects</span></div>
-        </div>
-        <p class="container stat-source" data-i18n="statSource">Based on the academic CV (October 2026); conference contributions include works under publication.</p>
       </section>
 
       <section class="section highlights-section" id="highlights" aria-labelledby="highlights-title">
@@ -962,7 +977,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
         <div class="container">
           <div class="section-heading-row">
             <div>
-              <p class="section-index">02 / RESEARCH</p>
+              <p class="section-index">RESEARCH DIRECTIONS</p>
               <h2 id="research-title" data-i18n="researchTitle">Research interests & direction</h2>
             </div>
             <p class="section-intro" data-i18n="researchIntro">Three connected strands shape my research: rigorous methods, responsible design, and applications that make AI useful in practice.</p>
@@ -979,7 +994,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
       <section class="section projects-section" id="projects" aria-labelledby="projects-title">
         <div class="container">
           <div class="section-heading-row">
-            <div><p class="section-index">03 / PROJECTS</p><h2 id="projects-title" data-i18n="projectsTitle">Research in practice</h2></div>
+            <div><p class="section-index">02 / PROJECTS</p><h2 id="projects-title" data-i18n="projectsTitle">Research in practice</h2></div>
             <p class="section-intro" data-i18n="projectsIntro">Selected collaborative projects spanning AI, robotics, cybersecurity, education and digital innovation.</p>
           </div>
           <div class="projects-grid">
@@ -1033,7 +1048,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
       <section class="section publications-section" id="publications" aria-labelledby="publications-title">
         <div class="container">
           <div class="section-heading-row">
-            <div><p class="section-index">04 / PUBLICATIONS</p><h2 id="publications-title" data-i18n="publicationsTitle">Selected publications</h2></div>
+            <div><p class="section-index">03 / PUBLICATIONS</p><h2 id="publications-title" data-i18n="publicationsTitle">Selected publications</h2></div>
             <div class="publication-heading-extra"><p class="section-intro" data-i18n="publicationsIntro">A selection of peer-reviewed work. The complete bibliography is available in my academic CV and Google Scholar profile.</p><a class="inline-link" href="https://scholar.google.gr/citations?hl=en&amp;user=rC9Hv_AAAAAJ" target="_blank" rel="noopener noreferrer"><span data-i18n="viewScholar">View Google Scholar</span> ↗</a></div>
           </div>
           <div class="publication-filters" role="group" aria-label="Filter publications">
@@ -1059,7 +1074,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
 
       <section class="section teaching-section" id="teaching" aria-labelledby="teaching-title">
         <div class="container">
-          <div class="section-heading-row"><div><p class="section-index">05 / TEACHING</p><h2 id="teaching-title" data-i18n="teachingTitle">Teaching across disciplines</h2></div><p class="section-intro" data-i18n="teachingIntro">I combine clear conceptual foundations with laboratory practice, worked examples, constructive feedback and independent problem-solving.</p></div>
+          <div class="section-heading-row"><div><p class="section-index">04 / TEACHING</p><h2 id="teaching-title" data-i18n="teachingTitle">Teaching across disciplines</h2></div><p class="section-intro" data-i18n="teachingIntro">I combine clear conceptual foundations with laboratory practice, worked examples, constructive feedback and independent problem-solving.</p></div>
           <div class="teaching-layout">
             <div class="teaching-quote"><span class="quote-symbol" aria-hidden="true">“</span><p data-i18n="teachingPhilosophy">My aim is to help students develop both technical competence and critical, responsible engagement with AI and digital technologies.</p><span class="quote-caption" data-i18n="teachingEthos">TEACHING ETHOS</span></div>
             <div class="teaching-timeline">
@@ -1102,7 +1117,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
 
       <section class="section service-section" id="service" aria-labelledby="service-title">
         <div class="container">
-          <div class="section-heading-row"><div><p class="section-index">06 / COMMUNITY</p><h2 id="service-title" data-i18n="serviceTitle">Academic service & engagement</h2></div><p class="section-intro" data-i18n="serviceIntro">Research grows through collaboration, mentoring, shared tools and active participation in the scholarly community.</p></div>
+          <div class="section-heading-row"><div><p class="section-index">ACADEMIC CONTRIBUTIONS</p><h2 id="service-title" data-i18n="serviceTitle">Academic service & engagement</h2></div><p class="section-intro" data-i18n="serviceIntro">Research grows through collaboration, mentoring, shared tools and active participation in the scholarly community.</p></div>
           <div class="service-grid">
             <article class="service-card"><span class="service-small" data-i18n="serviceCategoryOne">EDITORIAL & CONFERENCES</span><h3 data-i18n="serviceOneTitle">Supporting scholarly exchange</h3><p data-i18n="serviceOneBody">Editorial Board member of Studia Humana; scientific and organising committee involvement in SUM 2026, PoEM 2026, UNILOG, Scientix and Rules: Logic and Applications workshops.</p></article>
             <article class="service-card"><span class="service-small" data-i18n="serviceCategoryTwo">COLLABORATION</span><h3 data-i18n="serviceTwoTitle">International research networks</h3><p data-i18n="serviceTwoBody">Collaborations spanning RuleML, the University of Twente, Jadavpur University, the Hellenic-Romanian Logic and Computation Group, and European robotics and STEM education networks.</p></article>
@@ -1113,7 +1128,7 @@ main > section h1:focus-visible, main > section h2:focus-visible {
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="container contact-layout"><div><p class="section-index light-index">07 / CONTACT</p><h2 id="contact-title" data-i18n="contactTitle">Let’s connect around research.</h2><p data-i18n="contactBody">I welcome conversations about trustworthy AI, computational argumentation, research collaborations and interdisciplinary teaching.</p></div><div class="contact-actions"><a class="btn btn-light" href="mailto:salmpani@mail.ntua.gr"><span data-i18n="contactEmail">Get in touch</span><span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:salmpani@mail.ntua.gr">salmpani@mail.ntua.gr</a></div></div>
+        <div class="container contact-layout"><div><p class="section-index light-index">05 / CONTACT</p><h2 id="contact-title" data-i18n="contactTitle">Let’s connect around research.</h2><p data-i18n="contactBody">I welcome conversations about trustworthy AI, computational argumentation, research collaborations and interdisciplinary teaching.</p></div><div class="contact-actions"><a class="btn btn-light" href="mailto:salmpani@mail.ntua.gr"><span data-i18n="contactEmail">Get in touch</span><span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:salmpani@mail.ntua.gr">salmpani@mail.ntua.gr</a></div></div>
       </section>
     </main>
 
@@ -1125,8 +1140,8 @@ main > section h1:focus-visible, main > section h2:focus-visible {
 
   const greek = {
     skipContent: 'Μετάβαση στο κύριο περιεχόμενο',
-    navAbout: 'Σχετικά', navHighlights: 'Νέα', navResearch: 'Έρευνα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
-    navTeaching: 'Διδασκαλία', navService: 'Ακαδημαϊκή προσφορά', navContact: 'Επικοινωνία',
+    navAbout: 'Σχετικά', navHighlights: 'Νέα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
+    navTeaching: 'Διδασκαλία', navContact: 'Επικοινωνία',
     heroEyebrow: 'ΕΡΕΥΝΗΤΡΙΑ · ΔΙΔΑΣΚΟΥΣΑ · ΠΡΟΓΡΑΜΜΑΤΙΣΤΡΙΑ',
     heroTitle: 'Αξιόπιστη ΤΝ με θεμέλιο τη <em>συλλογιστική.</em>',
     heroDescription: 'Ερευνώ πώς η υπολογιστική επιχειρηματολογία και η τυπική συλλογιστική μπορούν να καταστήσουν τα ευφυή συστήματα πιο διαφανή, υπεύθυνα και προσανατολισμένα στις ανθρώπινες ανάγκες.',
@@ -1135,10 +1150,6 @@ main > section h1:focus-visible, main > section h2:focus-visible {
     visualLabel: 'ΕΡΕΥΝΗΤΙΚΕΣ ΣΥΝΔΕΣΕΙΣ', visualFoot: 'ΑΠΟ ΤΗ ΛΟΓΙΚΗ ΣΤΙΣ ΕΦΑΡΜΟΓΕΣ',
     orbitFormal: 'ΤΥΠΙΚΗ<br>ΣΥΛΛΟΓΙΣΤΙΚΗ', orbitExplain: 'ΕΞΗΓΗΣΙΜΗ<br>ΤΝ',
     orbitSystems: 'ΕΥΦΥΗ<br>ΣΥΣΤΗΜΑΤΑ', orbitCore: 'ΑΝΘΡΩΠΟ-<br>ΚΕΝΤΡΙΚΗ<br>ΤΝ',
-    factOneLabel: 'ΑΡΘΡΑ ΣΕ ΠΕΡΙΟΔΙΚΑ', factOne: 'Δημοσιεύσεις με κρίση',
-    factTwoLabel: 'ΣΥΝΕΔΡΙΑΚΕΣ ΣΥΝΕΙΣΦΟΡΕΣ', factTwo: 'Εργασίες και παρουσιάσεις',
-    factThreeLabel: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ', factThree: 'Έργα έρευνας και καινοτομίας',
-    statSource: 'Στοιχεία από το ακαδημαϊκό βιογραφικό (Οκτώβριος 2026)· οι συνεδριακές συνεισφορές περιλαμβάνουν και εργασίες υπό δημοσίευση.',
     highlightsTitle: 'Πρόσφατα νέα και διακρίσεις',
     highlightsIntro: 'Επιλεγμένες δημοσιεύσεις, διακρίσεις και δράσεις καθοδήγησης από την πρόσφατη ακαδημαϊκή μου δραστηριότητα.',
     highlightSumType: 'ΣΥΝΕΔΡΙΟ',
@@ -1261,7 +1272,6 @@ main > section h1:focus-visible, main > section h2:focus-visible {
   const mainNavigation = document.getElementById('site-nav');
   const profileLinks = document.querySelector('.hero-social');
   const researchVisual = document.querySelector('.hero-visual');
-  const academicStats = document.querySelector('.hero-bottom');
   const publicationFilters = document.querySelector('.publication-filters');
 
   function setLanguage(language) {
@@ -1289,7 +1299,6 @@ main > section h1:focus-visible, main > section h2:focus-visible {
     mainNavigation.setAttribute('aria-label', isGreek ? 'Κεντρική πλοήγηση' : 'Main navigation');
     profileLinks.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκά προφίλ' : 'Academic profiles');
     researchVisual.setAttribute('aria-label', isGreek ? 'Ερευνητικά πεδία' : 'Research themes');
-    academicStats.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκό έργο με μια ματιά' : 'Academic work at a glance');
     publicationFilters.setAttribute('aria-label', isGreek ? 'Φιλτράρισμα δημοσιεύσεων' : 'Filter publications');
     document.title = isGreek ? 'Δρ Σοφία Αλμπάνη · Ακαδημαϊκή Ιστοσελίδα' : 'Dr Sofia Almpani · Academic Research Portfolio';
     try { localStorage.setItem('sofia-portfolio-language', isGreek ? 'el' : 'en'); } catch { /* storage may be unavailable */ }
@@ -1422,10 +1431,16 @@ main > section h1:focus-visible, main > section h2:focus-visible {
   // all content remains available as an ordinary long-form page.
   const pages = [...document.querySelectorAll('main > section[id]')];
   const pageLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+  // Research and academic service are now sections of the About view rather
+  // than separate navigation tabs. Their old URL hashes remain usable.
+  const aboutSections = new Set(['research', 'service']);
   function showPage(scrollToStart = true) {
     const requested = decodeURIComponent(window.location.hash.slice(1)) || 'about';
-    const page = pages.find(item => item.id === requested) || pages[0];
-    pages.forEach(item => { item.hidden = item !== page; });
+    const insideAbout = aboutSections.has(requested);
+    const page = pages.find(item => item.id === (insideAbout ? 'about' : requested)) || pages[0];
+    pages.forEach(item => {
+      item.hidden = item !== page && !(page.id === 'about' && aboutSections.has(item.id));
+    });
     pageLinks.forEach(link => {
       if (link.getAttribute('href') === `#${page.id}`) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -1433,8 +1448,10 @@ main > section h1:focus-visible, main > section h2:focus-visible {
     document.body.dataset.currentView = page.id;
     closeMenu();
     if (scrollToStart) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      const heading = page.querySelector('h1,h2');
+      const target = insideAbout ? pages.find(item => item.id === requested) : page;
+      if (insideAbout && target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      const heading = (target || page).querySelector('h1,h2');
       if (heading) {
         heading.tabIndex = -1;
         heading.focus({ preventScroll: true });
