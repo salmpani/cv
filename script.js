@@ -4,8 +4,8 @@
 
   const greek = {
     skipContent: 'Μετάβαση στο κύριο περιεχόμενο',
-    navAbout: 'Σχετικά', navHighlights: 'Νέα', navResearch: 'Έρευνα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
-    navTeaching: 'Διδασκαλία', navService: 'Ακαδημαϊκή προσφορά', navContact: 'Επικοινωνία',
+    navAbout: 'Σχετικά', navHighlights: 'Νέα', navProjects: 'Έργα', navPublications: 'Δημοσιεύσεις',
+    navTeaching: 'Διδασκαλία', navContact: 'Επικοινωνία',
     heroEyebrow: 'ΕΡΕΥΝΗΤΡΙΑ · ΔΙΔΑΣΚΟΥΣΑ · ΠΡΟΓΡΑΜΜΑΤΙΣΤΡΙΑ',
     heroTitle: 'Αξιόπιστη ΤΝ με θεμέλιο τη <em>συλλογιστική.</em>',
     heroDescription: 'Ερευνώ πώς η υπολογιστική επιχειρηματολογία και η τυπική συλλογιστική μπορούν να καταστήσουν τα ευφυή συστήματα πιο διαφανή, υπεύθυνα και προσανατολισμένα στις ανθρώπινες ανάγκες.',
@@ -14,10 +14,6 @@
     visualLabel: 'ΕΡΕΥΝΗΤΙΚΕΣ ΣΥΝΔΕΣΕΙΣ', visualFoot: 'ΑΠΟ ΤΗ ΛΟΓΙΚΗ ΣΤΙΣ ΕΦΑΡΜΟΓΕΣ',
     orbitFormal: 'ΤΥΠΙΚΗ<br>ΣΥΛΛΟΓΙΣΤΙΚΗ', orbitExplain: 'ΕΞΗΓΗΣΙΜΗ<br>ΤΝ',
     orbitSystems: 'ΕΥΦΥΗ<br>ΣΥΣΤΗΜΑΤΑ', orbitCore: 'ΑΝΘΡΩΠΟ-<br>ΚΕΝΤΡΙΚΗ<br>ΤΝ',
-    factOneLabel: 'ΑΡΘΡΑ ΣΕ ΠΕΡΙΟΔΙΚΑ', factOne: 'Δημοσιεύσεις με κρίση',
-    factTwoLabel: 'ΣΥΝΕΔΡΙΑΚΕΣ ΣΥΝΕΙΣΦΟΡΕΣ', factTwo: 'Εργασίες και παρουσιάσεις',
-    factThreeLabel: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ', factThree: 'Έργα έρευνας και καινοτομίας',
-    statSource: 'Στοιχεία από το ακαδημαϊκό βιογραφικό (Οκτώβριος 2026)· οι συνεδριακές συνεισφορές περιλαμβάνουν και εργασίες υπό δημοσίευση.',
     highlightsTitle: 'Πρόσφατα νέα και διακρίσεις',
     highlightsIntro: 'Επιλεγμένες δημοσιεύσεις, διακρίσεις και δράσεις καθοδήγησης από την πρόσφατη ακαδημαϊκή μου δραστηριότητα.',
     highlightSumType: 'ΣΥΝΕΔΡΙΟ',
@@ -140,7 +136,6 @@
   const mainNavigation = document.getElementById('site-nav');
   const profileLinks = document.querySelector('.hero-social');
   const researchVisual = document.querySelector('.hero-visual');
-  const academicStats = document.querySelector('.hero-bottom');
   const publicationFilters = document.querySelector('.publication-filters');
 
   function setLanguage(language) {
@@ -168,7 +163,6 @@
     mainNavigation.setAttribute('aria-label', isGreek ? 'Κεντρική πλοήγηση' : 'Main navigation');
     profileLinks.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκά προφίλ' : 'Academic profiles');
     researchVisual.setAttribute('aria-label', isGreek ? 'Ερευνητικά πεδία' : 'Research themes');
-    academicStats.setAttribute('aria-label', isGreek ? 'Ακαδημαϊκό έργο με μια ματιά' : 'Academic work at a glance');
     publicationFilters.setAttribute('aria-label', isGreek ? 'Φιλτράρισμα δημοσιεύσεων' : 'Filter publications');
     document.title = isGreek ? 'Δρ Σοφία Αλμπάνη · Ακαδημαϊκή Ιστοσελίδα' : 'Dr Sofia Almpani · Academic Research Portfolio';
     try { localStorage.setItem('sofia-portfolio-language', isGreek ? 'el' : 'en'); } catch { /* storage may be unavailable */ }
@@ -301,10 +295,16 @@
   // all content remains available as an ordinary long-form page.
   const pages = [...document.querySelectorAll('main > section[id]')];
   const pageLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+  // Research is now a section of the About view rather
+  // than separate navigation tabs. Their old URL hashes remain usable.
+  const aboutSections = new Set(['research']);
   function showPage(scrollToStart = true) {
     const requested = decodeURIComponent(window.location.hash.slice(1)) || 'about';
-    const page = pages.find(item => item.id === requested) || pages[0];
-    pages.forEach(item => { item.hidden = item !== page; });
+    const insideAbout = aboutSections.has(requested);
+    const page = pages.find(item => item.id === (insideAbout ? 'about' : requested)) || pages[0];
+    pages.forEach(item => {
+      item.hidden = item !== page && !(page.id === 'about' && aboutSections.has(item.id));
+    });
     pageLinks.forEach(link => {
       if (link.getAttribute('href') === `#${page.id}`) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -312,8 +312,10 @@
     document.body.dataset.currentView = page.id;
     closeMenu();
     if (scrollToStart) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      const heading = page.querySelector('h1,h2');
+      const target = insideAbout ? pages.find(item => item.id === requested) : page;
+      if (insideAbout && target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      const heading = (target || page).querySelector('h1,h2');
       if (heading) {
         heading.tabIndex = -1;
         heading.focus({ preventScroll: true });

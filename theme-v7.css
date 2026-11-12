@@ -1,0 +1,61 @@
+/* Selected frame treatments. All other site elements retain their existing style. */
+
+/* Research B: open editorial composition without icons or lines. */
+.research-grid { gap: clamp(16px, 2.5vw, 32px); }
+.research-card {
+  border: 0;
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  min-height: 0;
+  padding: 10px 12px 17px;
+  transition: none;
+}
+.research-card:nth-child(2),
+.research-card:nth-child(3) { border: 0; }
+.research-card:hover {
+  transform: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.research-card h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(26px, 2.15vw, 30px);
+  line-height: 1.21;
+  letter-spacing: -.015em;
+  font-weight: 500;
+}
+.research-card .card-number { color: #ad367b; }
+.research-keyword {
+  color: #ac337b;
+  border: 0;
+  padding-top: 7px;
+}
+.research-vision { border-left: 0; }
+
+/* About combines the profile and research directions. */
+body[data-current-view="about"] .hero { padding-bottom: 47px; }
+body[data-current-view="about"] .research-section { padding-block: 52px 64px; }
+body[data-current-view="about"] .service-section { padding-block: 55px 90px; }
+
+/* Teaching A: precision outline — a consistent cyan border and top marker. */
+.teaching-item,
+.teaching-item:nth-child(3n+2),
+.teaching-item:nth-child(3n) {
+  border: 1px solid #90d0dc;
+  border-top: 4px solid #19b7cb;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: none;
+}
+
+@media (max-width: 590px) {
+  .research-card { padding: 26px 22px 24px; }
+}
+
+/* Platform logos stay legible and aligned with their profile labels. */
+.hero-social a { display: inline-flex; align-items: center; gap: 6px; }
+.profile-logo { width: 19px; height: 19px; flex: 0 0 19px; }
+.research-card h3 { margin-top: 18px; }
